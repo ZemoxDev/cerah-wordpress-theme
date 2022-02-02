@@ -1,0 +1,318 @@
+/*
+
+    Theme Name: Cerah
+    Text Domain: CerahTheme
+    Version: 1
+    Description: Light Fancy Theme
+    Tags: light, responsive, fancy
+    Author: SlewareGmbH
+    Author URI: https://sleware.com/
+    
+*/
+
+/* General CSS */
+
+h1{
+    color: #474747;
+}
+
+h2{
+    color: #474747;
+}
+
+h3{
+    color: #474747;
+}
+
+h4{
+    color: #474747;
+}
+
+p{
+    color: #474747;
+}
+
+label{
+    color: #474747;
+}
+
+hr{
+    color: #474747;
+}
+
+a{
+    color: #E5890A !important;
+    text-decoration: none !important;
+}
+
+a:hover{
+    color: #c87909 !important;
+    text-decoration: none !important;
+}
+
+button {
+    background-color: #E5890A;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+body {
+    min-height: 0;
+    background-color: #dbdbc8;
+}
+
+/* Header CSS */
+
+.nav-links{
+    margin-top: 3rem;
+}
+
+.header{
+    margin-bottom: 5rem;
+}
+
+.navbar {
+    transition: all 0.4s;
+}
+
+.navbar-nav{
+    font-size: 1.125rem;
+}
+
+.brand{
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.navbar.active {
+    background: #fafafa;
+}
+
+.navbar-toggler{
+    color: #474747;
+}
+
+#menu-header{
+    list-style-type: none;
+    padding-right: 2rem;
+}
+
+.menu-item {
+    padding-right: 2rem !important;
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #fafafa;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #474747;
+    }
+
+    .navbar-nav a{
+        color: #474747;
+    }
+
+    .menu-item{
+        padding-bottom: 0.5rem ; 
+    }
+}
+
+.bg-cover {
+    background-size: cover !important;
+    min-height: 60vh;
+}
+
+.sub-menu {
+    visibility: hidden;
+    transition: all 0.5s ease;
+    display: none;
+    padding: 1rem;
+    list-style-type: none;
+    font-size: 1rem;
+    position: absolute;
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+}
+
+.sub-menu li{
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px inset #ececec;
+    border-spacing: 5px;
+}
+
+.navbar.active .sub-menu{
+    visibility: hidden;
+    transition: all 0.5s ease;
+    display: none;
+    padding: 1rem;
+    list-style-type: none;
+    font-size: 1rem;
+    position: absolute;
+    background: #fafafa;
+    border-bottom: 1px solid #ececec;
+}
+
+.navbar.active .sub-menu li{
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px inset #ececec;
+    border-spacing: 5px;
+}
+
+.navbar-nav li:hover > .sub-menu,
+.sub-menu:hover {
+    padding-top: 1rem;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.sub-menu li{
+    clear: both;
+}
+
+.image-title{
+    padding-top: 15rem;
+}
+
+.image-big{
+    background: url(https://sleware.com/wp-content/uploads/2022/01/hill-sky-scaled.jpg) center 60%;
+    background-repeat: no-repeat;
+}
+
+.custom-logo-link{
+    padding-left: 1rem;
+}
+
+.custom-logo{
+    width: clamp(250px, 50%, 500px);
+    height: clamp(250px, 50%, 500px);
+}
+
+/* Footer CSS */
+  
+footer {
+    background: #fafafa;
+}
+
+.form-control {
+    background: #2f3138;
+    border-color: #545454;
+}
+  
+.form-control:focus {
+    background: #2f3138;
+}
+
+.text-small {
+    font-size: 0.9rem !important;
+}
+
+.footer-bottom{
+    background: #eeeeee;
+}
+
+i:link{
+    color: #fff;
+}
+
+.margin{
+    margin-top: 1000px;
+}
+
+#social-media{
+    margin-right: 1rem;
+}
+
+/* Blog Page CSS */
+
+.post-section{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.post-section img{
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+}
+
+.post-section img:hover{
+    transform: scale(1.05);
+}
+
+/* Blog Post CSS */
+
+input, label {
+    display:block;
+}
+
+.form-group textarea{
+    width: 100%;
+}
+
+.form-submit input{
+    background-color: #E5890A;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.comment-author{
+    padding-bottom: 1rem;
+}
+
+.comment-meta{
+    padding-bottom: 1rem;
+}
+
+.comment-author img{
+    width: 30px;
+    height: 30px;
+}
+
+.reply{
+    padding-bottom: 3rem;
+}
+
+.blog-meta{
+    color: #bdbdbd;
+}
+
+.tags{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.category ul{
+    display: inline;
+    list-style-type:none;
+}
+
+.content-header{
+    margin-bottom: 3rem;
+}
+
+.comments{
+    margin-top: 3rem;
+}
