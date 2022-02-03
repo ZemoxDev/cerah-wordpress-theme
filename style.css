@@ -316,3 +316,53 @@ input, label {
 .comments{
     margin-top: 3rem;
 }
+
+/*404 Page */ 
+
+.error{
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+.error-code{
+    font-size: 220px;
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    height: 250px;
+    letter-spacing: 15px;
+    color: #474747;
+}
+
+.error-page{
+    text-align:center;
+    display:block;
+    position:relative;
+    letter-spacing: 12px;
+    font-size: 4em;
+    line-height: 80%;
+    margin-bottom: 1rem;
+    color: #474747;
+}
+
+.error-found{
+    text-align:center;
+    display:block;
+    position: relative;
+    font-size: 20px;
+    margin-bottom: 2rem;
+    color: #474747;
+}
+
+.error-btn{
+    background-color: #E5890A;
+    color: #fff;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 5rem;
+}
