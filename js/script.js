@@ -7,3 +7,7 @@ $(function () {
         }
     });
 });
+
+$( "#navbar-toggler" ).click(function() {
+    $(".collapse:not(.show)").css("display", "unset");
+});

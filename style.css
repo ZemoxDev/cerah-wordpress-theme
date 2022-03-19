@@ -1,13 +1,20 @@
 /*
 
     Theme Name: Cerah
-    Text Domain: CerahTheme
-    Version: 1
-    Description: Light Fancy Theme
-    Tags: light, responsive, fancy
-    Author: SlewareGmbH
+    Theme URI: https://sleware.com/cerah-theme/
+    Text Domain: cerah
+    Domain Path: /languages
+    Version: 1.0
+    Description: Cerah is the perfect theme for your WordPress Website. It is fast, highly customizable and ready for almost any Website, like a Blog, Portfolio, Business Websites, WooCommerce Store and much more. It supports Elementor, Divi, Visual Composer, Beaver Builder and many more visual Editing Plugins. Looking for a multy-purpose Theme? Look no further. Learn more and check out our powerful premium version that comes with 2 complete Web Templates https://sleware.com/cerah-theme/
+    Tags: blog, e-commerce, portfolio, one-column, custom-colors, custom-header, custom-logo, featured-images, footer-widgets, full-width-template
+    Author: Sleware
     Author URI: https://sleware.com/
+    Tested up to: 7.4
+    Requires PHP: 7.4
+    License: GNU General Public License v2 or later
+    License URI: https://www.gnu.org/licenses/gpl-2.0.html
     
+    Cerah Wordpress Theme, Copyright 2022 Sleware
 */
 
 /* General CSS */
@@ -28,26 +35,12 @@ h4{
     color: #474747;
 }
 
-p{
-    color: #474747;
-}
-
 label{
     color: #474747;
 }
 
 hr{
     color: #474747;
-}
-
-a{
-    color: #E5890A !important;
-    text-decoration: none !important;
-}
-
-a:hover{
-    color: #c87909 !important;
-    text-decoration: none !important;
 }
 
 button {
@@ -63,7 +56,18 @@ button {
 
 body {
     min-height: 0;
-    background-color: #dbdbc8;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:focus{
+    text-decoration: underline;
 }
 
 /* Header CSS */
@@ -72,16 +76,17 @@ body {
     margin-top: 3rem;
 }
 
-.header{
-    margin-bottom: 5rem;
-}
-
 .navbar {
     transition: all 0.4s;
 }
 
 .navbar-nav{
     font-size: 1.125rem;
+}
+
+.navbar-collapse{
+    flex-grow: 0 !important;
+    align-items: flex-end !important;
 }
 
 .brand{
@@ -94,10 +99,6 @@ body {
     white-space: nowrap;
 }
 
-.navbar.active {
-    background: #fafafa;
-}
-
 .navbar-toggler{
     color: #474747;
 }
@@ -108,7 +109,7 @@ body {
 }
 
 .menu-item {
-    padding-right: 2rem !important;
+    padding-right: 2rem;
 }
 
 @media (max-width: 991.98px) {
@@ -127,33 +128,23 @@ body {
     .menu-item{
         padding-bottom: 0.5rem ; 
     }
+
+    .header{
+        margin-bottom: 4rem;
+    }
+
+    .container{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
 }
 
 .bg-cover {
-    background-size: cover !important;
+    background-size: cover;
     min-height: 60vh;
 }
 
-.sub-menu {
-    visibility: hidden;
-    transition: all 0.5s ease;
-    display: none;
-    padding: 1rem;
-    list-style-type: none;
-    font-size: 1rem;
-    position: absolute;
-    background: #fff;
-    border-bottom: 1px solid #ececec;
-}
-
-.sub-menu li{
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    border-bottom: 1px inset #ececec;
-    border-spacing: 5px;
-}
-
-.navbar.active .sub-menu{
+.navbar-nav ul{
     visibility: hidden;
     transition: all 0.5s ease;
     display: none;
@@ -162,18 +153,28 @@ body {
     font-size: 1rem;
     position: absolute;
     background: #fafafa;
-    border-bottom: 1px solid #ececec;
 }
 
-.navbar.active .sub-menu li{
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    border-bottom: 1px inset #ececec;
+.navbar-nav ul li{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     border-spacing: 5px;
+}
+
+.navbar-nav ul li:hover{
+    background-color: #0000000a;
 }
 
 .navbar-nav li:hover > .sub-menu,
 .sub-menu:hover {
+    padding-top: 1rem;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.navbar-nav li:focus > .sub-menu,
+.sub-menu:focus {
     padding-top: 1rem;
     visibility: visible;
     opacity: 1;
@@ -218,7 +219,7 @@ footer {
 }
 
 .text-small {
-    font-size: 0.9rem !important;
+    font-size: 1.1rem;
 }
 
 .footer-bottom{
@@ -237,20 +238,26 @@ i:link{
     margin-right: 1rem;
 }
 
+.list-unstyled ul{
+    list-style-type: none;
+    padding: 0;
+}
+
 /* Blog Page CSS */
 
 .post-section{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
 }
 
 .post-section img{
     max-width: 100%;
+    width: 100%;
     transition: all 0.3s;
     display: block;
-    width: 100%;
     height: auto;
     transform: scale(1);
+    padding-bottom: 2rem;
 }
 
 .post-section img:hover{
@@ -305,19 +312,47 @@ input, label {
 }
 
 .category ul{
-    display: inline;
-    list-style-type:none;
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+
+.category ul li{
+    padding-right: 1rem;
 }
 
 .content-header{
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .comments{
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
-/*404 Page */ 
+.article-section{
+    margin-top: 2rem;
+}
+
+.title{
+    margin-bottom: 1rem;
+}
+
+.form-group textarea {
+    width:100%;
+    resize: vertical;
+    padding: 15px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+}
+
+.form-group input {
+    resize: vertical;
+    padding: 10px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+}
+
+/* 404 Page */ 
 
 .error{
     text-align: center;
@@ -365,4 +400,205 @@ input, label {
     display: inline-block;
     font-size: 16px;
     margin-bottom: 5rem;
+}
+
+/* Elementor Responsive */
+
+@media screen and (max-width: 768px) {
+    .container{
+        max-width: 100%;
+    }
+
+    .content{
+        max-width: 100%;
+    }
+
+    .sidebar{
+        max-width: 100%;
+    }
+}
+
+/* WooCommerce */
+
+.woocommerce{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.woocommerce-MyAccount-navigation ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.woocommerce .quantity .qty{
+    width: 4rem;
+    height: 2.2rem;
+}
+
+.woocommerce table.cart td.actions .input-text{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.woocommerce table.cart img{
+    max-width: 25%;
+}
+
+.coupon .button{
+    width: 100%;
+}
+
+.coupon input{
+    width:100%;
+    resize: vertical;
+    padding:15px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+    height: 35px;
+}
+
+.col-1{
+    max-width: 100% !important;
+}
+
+.col-2{
+    max-width: 100% !important;
+}
+
+.form-row{
+    display: grid;
+}
+
+#order_review_heading{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.woocommerce-billing-fields input {
+    width:100%;
+    resize: vertical;
+    padding:15px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+    height: 35px;
+}
+
+.checkout_coupon input{
+    width:100%;
+    resize: vertical;
+    padding:15px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+    height: 35px;
+}
+
+.woocommerce form .form-row select{
+    width:100%;
+    resize: vertical;
+    cursor: pointer;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+    height: 35px;
+}
+
+.woocommerce-address-fields input{
+    width:100%;
+    resize: vertical;
+    padding:15px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+    height: 35px;
+}
+
+.select2-container--default .select2-selection--single {
+    width: 100%;
+    resize: vertical;
+    padding: 2px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+    height: 35px;
+}
+
+.woocommerce-additional-fields textarea {
+    width:100%;
+    resize: vertical;
+    padding: 15px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+}
+
+.woocommerce form .form-row textarea{
+    height: 10em;
+}
+
+.woocommerce form .show-password-input{
+    top: 5px;
+}
+
+.woocommerce-MyAccount-content input, select{
+    width:100%;
+    resize: vertical;
+    padding:15px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+    height: 35px;
+}
+
+.woocommerce-form-login input{
+    width:100%;
+    resize: vertical;
+    padding:15px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.06);
+    height: 35px;
+}
+
+.woocommerce a.remove{
+    height: 1.2em;
+    width: 1.2em;
+}
+
+/* Widgets */
+
+.widget{
+    list-style-type: none;
+}
+
+/* Accessibility */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+  
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    right: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}
+  
+#content[tabindex="-1"]:focus {
+    outline: 0;
 }

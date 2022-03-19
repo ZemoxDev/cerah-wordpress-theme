@@ -1,29 +1,29 @@
-    <!-- Header-->
-	<?php
-		get_header();
-	?>
+<!-- Header-->
+<?php
+	get_header();
+?>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-sm">
+<body <?php body_class(); ?> >
 
-				<article class="content px-2 py-5 p-md-5">
+	<?php wp_body_open(); ?>
 
-					<?php
-						if(have_posts() ) {
-							while( have_posts() ) {
-								the_post();
-								the_content();
-							}
-						}
-					?>
+	<div class="container" id="content">
+		
+		<article class="content px-2 py-5 p-md-5">
+			<?php
+				if(have_posts() ) {
+					while( have_posts() ) {
+						the_post();
+						the_content();
+					}
+				}
+			?>
+		</article>
 
-				</article>
-			</div>
-		</div>	
 	</div>
+</body>
 
-    <!-- FOOTER -->
-	<?php
-		get_footer();
-	?>
+<!-- FOOTER -->
+<?php
+	get_footer();
+?>

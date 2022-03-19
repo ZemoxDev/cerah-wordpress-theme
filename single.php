@@ -1,30 +1,33 @@
-    <!-- Header-->
-	<?php
-		get_header();
-	?>
+<!-- Header-->
+<?php
+	get_header();
+?>
 
-	<div class="container">
+<body <?php body_class(); ?> >
+
+	<?php wp_body_open(); ?>
+
+	<div class="container" id="content">
+
 		<div class="row">
-			<div class="col-sm">
 
-				<article class="content px-2 py-5 p-md-5">
+			<?php
+				if(have_posts() ) {
+					while( have_posts() ) {
+						the_post();
+						
+						get_template_part('template-parts/content', 'article');
+					}
+				}
+			?>
 
-					<?php
-						if(have_posts() ) {
-							while( have_posts() ) {
-								the_post();
-								
-								get_template_part('template-parts/content', 'article');
-							}
-						}
-					?>
-
-				</article>
-			</div>
 		</div>
+
 	</div>
 
-    <!-- FOOTER -->
-	<?php
-		get_footer();
-	?>
+</body>	
+
+<!-- FOOTER -->
+<?php
+	get_footer();
+?>

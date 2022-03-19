@@ -1,18 +1,24 @@
-    <!-- Header-->
-    <?php
-		get_header();
-	?>
+<!-- Header-->
+<?php
+	get_header();
+?>
 
-    <div class='error'>
-    
+<body <?php body_class(); ?> >
+
+    <?php wp_body_open(); ?>
+
+    <div class='error' id="content">
+
         <div class='error-code'>404</div>
-        <div class='error-page'>THE PAGE</div>
-        <div class='error-found'>WAS NOT FOUND</div>
-        <a class='error-btn' href="<?php echo get_home_url(); ?>">GO BACK</a>
-    
+        <div class='error-page'><?php _e('THE PAGE', 'cerah') ?></div>
+        <div class='error-found'> <?php _e('WAS NOT FOUND', 'cerah') ?></div>
+        <a class='error-btn' href="<?php echo get_home_url(); ?>"><?php _e('GO BACK', 'cerah') ?></a>
+
     </div>
 
-    <!-- FOOTER -->
-	<?php
-		get_footer();
-	?>
+</body>
+
+<!-- FOOTER -->
+<?php
+	get_footer();
+?>
